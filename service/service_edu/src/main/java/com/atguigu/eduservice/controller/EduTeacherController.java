@@ -3,12 +3,10 @@ package com.atguigu.eduservice.controller;
 
 import com.atguigu.eduservice.entity.EduTeacher;
 import com.atguigu.eduservice.service.EduTeacherService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
+import com.atguigu.commonutils.R;
 import java.util.List;
 
 /**
@@ -26,10 +24,26 @@ public class EduTeacherController {
     private EduTeacherService teacherService;
 
     @GetMapping
-    public List<EduTeacher> getAllTeacher() {
-        List <EduTeacher> list = teacherService.list(null);
-        return list;
+    public R getAllTeacher() {
+        List<EduTeacher> list = teacherService.list(null);
+        return R.ok().data("list",list);
     }
+
+    @DeleteMapping("{id}")
+    public R delTeacher(@PathVariable String id) {
+        boolean remove = teacherService.removeById(id);
+       if(remove) {
+           return R.ok();
+       } else {
+           return R.error();
+       }
+    }
+
+//    @ApiOperation(value="分页查询讲师列表")
+//    @GetMapping("")
+//    public  R getTeacherPage(@PathVariable Long current, @PathVariable Long limit) {
+//
+//    }
 
 }
 
