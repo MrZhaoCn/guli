@@ -1,6 +1,7 @@
 package com.atguigu.eduservice.controller;
 
 
+import com.atguigu.baseservice.handler.GuliException;
 import com.atguigu.eduservice.entity.EduTeacher;
 import com.atguigu.eduservice.entity.vo.TeacherQuery;
 import com.atguigu.eduservice.service.EduTeacherService;
@@ -29,6 +30,7 @@ public class EduTeacherController {
 
     @GetMapping
     public R getAllTeacher() {
+
         List<EduTeacher> list = teacherService.list(null);
         return R.ok().data("list",list);
     }
