@@ -90,5 +90,23 @@ public class EduTeacherController {
         }
     }
 
+    @ApiOperation(value = "根据id查询讲师")
+    @GetMapping("getTeacherById/{id}")
+    public R getTeacherById(@PathVariable String id){
+        EduTeacher eduTeacher = teacherService.getById(id);
+        return R.ok().data("eduTeacher",eduTeacher);
+    }
+
+    @ApiOperation(value = "修改讲师")
+    @PostMapping("updateTeacher")
+    public R updateTeacher( @RequestBody EduTeacher eduTeacher){
+        boolean update = teacherService.updateById(eduTeacher);
+        if(update){
+            return R.ok();
+        }else{
+            return R.error();
+        }
+    }
+
 }
 
