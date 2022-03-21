@@ -16,4 +16,3 @@ public class GuliException extends RuntimeException {
     private String msg;
 
 }
-

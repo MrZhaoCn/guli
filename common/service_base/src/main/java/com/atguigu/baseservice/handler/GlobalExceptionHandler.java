@@ -1,15 +1,18 @@
 package com.atguigu.baseservice.handler;
 
 
+
+import com.atguigu.commonutils.R;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
-import com.atguigu.commonutils.R;
+
 @ControllerAdvice
 public class GlobalExceptionHandler {
+
     @ExceptionHandler(Exception.class)
     @ResponseBody
-    public R eroor(Exception e) {
+    public R error(Exception e){
         e.printStackTrace();
         return R.error();
     }
@@ -27,4 +30,6 @@ public class GlobalExceptionHandler {
         e.printStackTrace();
         return R.error().message(e.getMsg()).code(e.getCode());
     }
+
+
 }

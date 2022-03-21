@@ -19,4 +19,3 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         this.setFieldValByName("gmtModified",new Date(),metaObject);
     }
 }
-

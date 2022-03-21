@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @MapperScan("com.atguigu.eduservice.mapper")
 public class MyBatisPlusConfig {
+
     /**
      * 逻辑删除插件
      */
@@ -27,4 +28,5 @@ public class MyBatisPlusConfig {
     public PaginationInterceptor paginationInterceptor() {
         return new PaginationInterceptor();
     }
+
 }
