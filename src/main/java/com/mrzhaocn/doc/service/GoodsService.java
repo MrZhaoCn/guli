@@ -29,6 +29,6 @@ public class GoodsService {
     }
 
     public GoodsDo getById(Long id) {
-        return goodsDao.getById(id);
+        return goodsDao.selectOne(id);
     }
 }
