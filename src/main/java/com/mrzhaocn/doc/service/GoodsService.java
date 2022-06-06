@@ -17,18 +17,15 @@ public class GoodsService {
     private GoodsDao goodsDao;
 
     public void add(GoodsDo goods) {
-        goodsDao.insert(goods);
+
     }
 
     public void remove(Long id) {
-        goodsDao.delete(id);
+
     }
 
     public void  edit(GoodsDo goods) {
-        goodsDao.update(goods);
+
     }
 
-    public GoodsDo getById(Long id) {
-        return goodsDao.selectOne(id);
-    }
 }

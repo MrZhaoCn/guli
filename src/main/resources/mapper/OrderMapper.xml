@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 本映射文件对应OrderDao接口 -->
+<mapper namespace="com.mrzhaocn.doc.entity.OrderDao">
+    <!-- 对应OrderDao中的insert方法 -->
+    <insert id="insert" parameterType="com.mrzhaocn.doc.entity.OrderDo">
+        insert into `order` (goods_id,count) values (#{goodsId},#{count})
+    </insert>
+</mapper>

@@ -3,6 +3,9 @@ package com.mrzhaocn.doc.entity;
 import lombok.Data;
 
 @Data
+/**
+ * 商品类
+ */
 public class GoodsDo {
     /**
      * 商品id
@@ -13,11 +16,9 @@ public class GoodsDo {
      */
     private String name;
     /**
-     * 商品价格
+     * 商品库存
      */
-    private String price;
-    /**
-     * 商品图片
-     */
-    private String pic;
+    private Long num;
+
 }
+
