@@ -56,4 +56,12 @@ public interface ManageService {
 
 
     void saveAttrInfo(BaseAttrInfo attrInfo);
+
+    /**
+     * 根据三级分类Id 获取spuInfo集合数据
+     * @param spuInfoPage
+     * @param spuInfo
+     * @return
+     */
+    IPage<SpuInfo> getSpuInfoList(Page<SpuInfo> spuInfoPage, SpuInfo spuInfo);
 }
