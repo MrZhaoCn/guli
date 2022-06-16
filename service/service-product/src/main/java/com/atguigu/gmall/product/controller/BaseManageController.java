@@ -55,4 +55,9 @@ public class BaseManageController {
         //  返回数据
         return Result.ok(manageService.getBaseAttrInfoList(category1Id,category2Id,category3Id));
     }
+    @PostMapping("saveAttrInfo")
+    public Result saveAttrInfo(@RequestBody BaseAttrInfo baseAttrInfo) {
+        manageService.saveAttrInfo(baseAttrInfo);
+        return Result.ok();
+    }
 }

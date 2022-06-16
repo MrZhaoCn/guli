@@ -54,4 +54,6 @@ public interface ManageService {
      */
     List<BaseAttrInfo> getBaseAttrInfoList(Long category1Id,Long category2Id,Long category3Id);
 
+
+    void saveAttrInfo(BaseAttrInfo attrInfo);
 }
