@@ -7,18 +7,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>ltd.newbee.cloud</groupId>
-    <artifactId>spring-cloud-alibaba-demo</artifactId>
+    <artifactId>spring-cloud-alibaba-multi-service-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-cloud-alibaba-demo</name>
+    <name>spring-cloud-alibaba-multi-service-demo</name>
     <packaging>pom</packaging>
     <description>Spring Cloud Alibaba Demo</description>
 
     <modules>
-        <module>service-demo</module>
-        <module>service-demo2</module>
-        <module>nacos-provider-demo</module>
-        <module>nacos-consumer-demo</module>
-        <module>nacos-provider-demo1</module>
+        <module>goods-service-demo</module>
+        <module>shopcart-service-demo</module>
+        <module>order-service-demo</module>
     </modules>
 
     <properties>
