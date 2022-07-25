@@ -17,6 +17,7 @@
         <module>goods-service-demo</module>
         <module>shopcart-service-demo</module>
         <module>order-service-demo</module>
+        <module>gateway-demo</module>
     </modules>
 
     <properties>
